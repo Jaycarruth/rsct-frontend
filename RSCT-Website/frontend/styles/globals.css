@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root color variables for light & dark mode */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,9 +15,11 @@
   }
 }
 
+/* Global resets and layout fixes */
 html,
 body {
   max-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -20,8 +27,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply antialiased;
 }
 
 * {
@@ -30,11 +36,14 @@ body {
   margin: 0;
 }
 
+/* Ensure Tailwind colors & utility classes work */
 a {
   color: inherit;
   text-decoration: none;
+  @apply transition-colors duration-200 hover:text-blue-500;
 }
 
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

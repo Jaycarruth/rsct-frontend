@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# Ignore node_modules
+node_modules/
+
+# Ignore system files
+AppData/
+.vscode/
+NTUSER.*
+*.log
+*.lock
+.DS_Store
+
+# Ignore build and cache files
+.next/
+dist/
+out/
+
